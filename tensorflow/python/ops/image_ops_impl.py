@@ -352,7 +352,7 @@ def random_flip_up_down(image, seed=None):
     image: 4-D Tensor of shape `[batch, height, width, channels]` or 3-D Tensor
       of shape `[height, width, channels]`.
     seed: A Python integer. Used to create a random seed. See
-      `tf.compat.v1.set_random_seed` for behavior.
+      `tf.random.set_seed` for behavior.
 
   Returns:
     A tensor of the same type and shape as `image`.
@@ -392,7 +392,7 @@ def random_flip_left_right(image, seed=None):
     image: 4-D Tensor of shape `[batch, height, width, channels]` or 3-D Tensor
       of shape `[height, width, channels]`.
     seed: A Python integer. Used to create a random seed. See
-      `tf.compat.v1.set_random_seed` for behavior.
+      `tf.random.set_seed` for behavior.
 
   Returns:
     A tensor of the same type and shape as `image`.
@@ -412,7 +412,7 @@ def _random_flip(image, flip_index, seed, scope_name):
     flip_index: Dimension along which to flip the image.
       Vertical: 0, Horizontal: 1
     seed: A Python integer. Used to create a random seed. See
-      `tf.compat.v1.set_random_seed` for behavior.
+      `tf.random.set_seed` for behavior.
     scope_name: Name of the scope in which the ops are added.
 
   Returns:
